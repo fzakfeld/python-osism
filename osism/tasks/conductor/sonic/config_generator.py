@@ -476,7 +476,9 @@ def _get_breakout_port_valid_speeds(port_speed):
 
     speed_int = int(port_speed)
 
-    if speed_int == 25000:
+    if speed_int == 10000:
+        return "10000,1000"
+    elif speed_int == 25000:
         return "25000,10000,1000"
     elif speed_int == 50000:
         return "50000,25000,10000,1000"
